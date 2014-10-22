@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--
+		Welkom bij de Pietwijzer.nl broncode, mede nerd.
+		Wie weet vindt je iets grappigs.
+		-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Pietwijzer.nl</title>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="container" id="containerLogo">
+			<img src="images/Pietwijzer.png" alt="Pietwijzer.nl">
+		</div>
+
+		<div class="container" id="containerStart">
+			<div class="well">
+				<h1>Welkom bij de Pietwijzer!</h1>
+
+				<p>Weet je niet zeker of je dit jaar Sinterklaas moet vieren, omdat de uitbeelding van de trouwe knecht van onze Goedheiligman een donkere huidskleurheeft, en dit misschien afgunst bij de buren of je mede-Hollanders kan opwekken? Gebruik dan de Pietwijzer en wees voor altijd verlost van twijfel en schuldgevoel!</p>
+
+				<p>Door gewoon wat simpele vragen in te vullen kun je snel te weten komen wat voor standpunt je hebt en krijg je bovendien, gratis en voor niets, een passend advies voor de komende feestdagen.
+				Dus waar wacht je op? Klik die knop!</p>
+
+				<p><button type="button" class="btn btn-primary btn-lg">Deze ja. Klikt u maar.</button></p>
+
+				<p>&nbsp;</p>
+
+				<p style="margin-bottom: 0"><small>PAS OP: Niet aanbevolen voor Sinterklaasgelovers</small></p>
+
+				<div class="repeat-notice bs-callout bs-callout-danger" style="display: none">
+					<h4>WAARSCHUWING</h4>
+					Het meerdere malen raadplegen van de Pietwijzer kan in sommige gevallen een slecht geweten, mislukte Sinterklaasviering, boze kinderen, een slecht liefdesleven, een natuurramp of het krijgen van de roe veroorzaken, en als ergste, een vertekende uitslag geven. Pietwijzer.nl neemt geen verantwoordelijkheid voor het gebruiken van de Pietwijzer.
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ1" style="display: none;">
+			<div class="well">
+				<h1>Vraag 1</h1>
+
+				<p class="question">Sinterklaasje kom maar binnen met je...</p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Knecht</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Slaaf</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. Wegwezen! *deur dicht*</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. Ze zijn al geweest van het Liliane Fonds</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ2" style="display: none;">
+			<div class="well">
+				<h1>Vraag 2</h1>
+
+				<p class="question">Kijk naar de afbeelding. Kies het meest passende antwoord.</p>
+
+				<p><img class="img-thumbnail" src="images/vraag2.jpg" alt="Vraag 2"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Die linkse ziet een beetje bleekjes...</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Heeft die middelste een ziekte ofzo? Gauw naar de dokter!</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. De rechter Piet is prima zo, afblijven!</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. De linker Piet past beter in de samenleving van vandaag</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ3" style="display: none;">
+			<div class="well">
+				<h1>Vraag 3</h1>
+
+				<p class="question">Wat zie je op de volgende afbeelding?</p>
+
+				<p><img class="img-thumbnail" src="images/vraag3.png" alt="Vraag 3"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Zwarte Piet vult een schoen</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Ik wil die speelgoedauto!</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. Hey, blijf van mijn Nike's af, neger!</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. Een zwarte man die gedwongen wordt schoenen te vullen voor een laag loon</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ4" style="display: none;">
+			<div class="well">
+				<h1>Vraag 4</h1>
+
+				<p class="question">Wat is de ideale kleur van een werknemer?</p>
+
+				<p class="pull-left" style=" margin-right: 10px"><img style="background: #212121" src="images/vraag4.png" alt="Vraag 4"></p>
+
+				<p><small>Werkt nog niet</small></p>
+
+				<button type="button" class="btn btn-success btn-lg next">Volgende</button>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ5" style="display: none;">
+			<div class="well">
+				<h1>Vraag 5</h1>
+
+				<p class="question">Hoe is Zwarte Piet ontstaan?</p>
+
+				<p><img class="img-thumbnail" src="images/vraag5.jpg" alt="Vraag 5"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Hij is tegen zijn wil gedwongen om te werken voor de Sint</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Iets met slaven, roet en een schoorsteen?</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. Door Rutte is de Sint net zo blut als wij en moet op arbeiderskracht bezuinigen. Ik had geen VVD moeten stemmen...</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. Het was een slaaf die bevrijd is door de Sint en sindsdien goede daden doet</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ6" style="display: none;">
+			<div class="well">
+				<h1>Vraag 6</h1>
+
+				<p class="question">Wat zie je aan deze Piet?</p>
+
+				<p><img class="img-thumbnail" src="images/vraag6.jpg" alt="Vraag 6"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Ha mop, make-up vergeten?</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Zij is duidelijk niet blij met de verandering. Waarom onze traditie veranderen?</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. Deze Piet laat zien dat het ook zonder schmink kan en maakt een goed standpunt</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. <img src="images/emoji.png" class="emoji"> ...Zei je wat?</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ7" style="display: none;">
+			<div class="well">
+				<h1>Vraag 7</h1>
+
+				<p class="question">Wat is je eerste reactie op onderstaande afbeelding?</p>
+
+				<p><img class="img-thumbnail" src="images/vraag7.jpg" alt="Vraag 7"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Rennuh!</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Zie, blanken stelen net zo veel</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. De Sint is overduidelijk niet aardig tegen die Piet</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. De Sint test eerst de fiets zodat Piet er niet mee verongelukt</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ8" style="display: none;">
+			<div class="well">
+				<h1>Vraag 8</h1>
+
+				<p class="question">Wat vindt je hier nou van?</p>
+
+				<p><img class="img-thumbnail" src="images/vraag8.jpg" alt="Vraag 8"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Als je tegen racisme bent, waarom heb je dan witte plakband gekozen?</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Als je tegen racisme bent, waarom heb je dan een zwart shirt aan en geen witte?</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. Is dat echt bont? Dierenbeul!</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. Feminisme en racisme in één plaatje. Wat is er nou erger?</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ9" style="display: none;">
+			<div class="well">
+				<h1>Vraag 9</h1>
+
+				<p><img class="img-thumbnail" src="images/vraag9.jpg" alt="Vraag 9"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Goed plan</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Goed plan</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. Goed plan</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. Goed plan</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerQ10" style="display: none;">
+			<div class="well">
+				<h1>Vraag 10</h1>
+
+				<p class="question">Wat vindt je van de volgende uitspraken?</p>
+
+				<p><img class="img-thumbnail" src="images/vraag10.png" alt="Vraag 10"></p>
+
+				<div class="list-group answers">
+					<a href="#" class="ans ansA list-group-item">
+						<h4 class="list-group-item-heading">A. Goede standpunten, en alleen maar redenen van hoe belachelijk deze discussie is</h4>
+					</a>
+					<a href="#" class="ans ansB list-group-item">
+						<h4 class="list-group-item-heading">B. Nee, het racisme moet stoppen en daar hoort ook de karakterisering van Zwarte Piet bij</h4>
+					</a>
+					<a href="#" class="ans ansC list-group-item">
+						<h4 class="list-group-item-heading">C. Ik ben een walvis</h4>
+					</a>
+					<a href="#" class="ans ansD list-group-item">
+						<h4 class="list-group-item-heading">D. Zwart is wanneer wit ontbreekt. Dus als je wel wit hebt, heb je geen zwart. Maar als zwart aanwezig is heb je wel zwart en geen wit. Dus zwart en wit zijn twee kanten van dezelfde munt en het maakt dus niet uit</h4>
+					</a>
+				</div>
+
+				<button type="button" class="btn btn-success btn-lg next" style="display:none">Volgende</button>
+			</div>
+		</div>
+
+		<div class="container" id="containerCalculating" style="display: none;">
+			<div class="well">
+				<h1>Resultaten berekenen</h1>
+
+				<p>Een momentje. De Keukenpiet bereidt een verse uitslag en persoonlijk advies voor je, om van te smullen!</p>
+
+				<p class="question result-ticker"></p>
+			</div>
+		</div>
+
+		<div class="container" id="containerAnswer" style="display: none;">
+			<div class="well">
+				<h1>Resultaat</h1>
+
+				<div class="result result1"><p>Uit je antwoorden blijkt dat je overduidelijk pro-Piet bent. Voor jou kan het Sinterklaasfeest dit jaar dus gewoon doorgaan, niks aan de hand. De buren en mede-Hollanders hebben maar met je te leven, want jij ziet in dat het maar een figuur is, bedoeld om goed gedrag bij kinderen te belonen en ze een leuke avond en herinneringen te bezorgen.</p></div>
+
+				<div class="result result2"><p>Uit je antwoorden blijkt dat je tegen de Zwarte Piet bent en het is verstandig om dit jaar niet aan het Sinterklaasfeest mee te doen, want dan verpest je het toch maar voor alle anderen. Maar denk eens aan je kids. Die krijgen van het jaar helemaal niks van Sinterklaas. En ze zijn nog zo lief geweest en hebben zich er erg op verheugd. Is dat wat je wil? Wil je niet op een gegeven moment als de vraag komt van &ldquot;Waarom is Zwarte Piet zwart?&rdquot;, kunnen zeggen dat het niet uitmaakt welke huidskleur een persoon draagt? Ga jij later aan je kind vertellen dat jij vond dat Zwarte Piet niet meer zwart mocht zijn, omdat dat beter bij je wereldvisie past? Wel?</p>
+
+				<p>Zwarte Piet is een figuur. Welke geschiedenis je ook van hem als waarheid beschouwd, het is nu een figuur. En waarom zou je die veranderen? Dat brengt alleen maar meer verwarring. Laten we ons met belangrijkere bezig houden.</p></div>
+
+				<div class="result result3"><p>Tja, wat moeten we daarvan maken? Ben je wel helemaal bij geweest? En snapte je alle vragen? Het ging over Zwarte Piet h&egrave;, dat verzonnen figuur dat in opdracht van ’s werelds een na grootste kindervriend pakjes rondbrengt op 5 december. Ja, wanneer papa even het huis uit is ja.</p>
+				
+				<p>Nou ja, buiten dat een aantal simpele vragen duidelijk te hoog voor je gegrepen zijn kunnen we wel concluderen dat je... wat? Het maakt je helemaal niets uit als je maar cadeautjes krijgt?</p>
+	
+				<p>Hmm, daar zit natuurlijk wat in. Laten we gewoon doorgaan alle vrolijkheden en elke decembermaand onze portemonnees flink verdunnen met plastieken rotzooi die volgend jaar toch alweer uit is. Als jij er maar blij van wordt!</p></div>
+
+				<div class="result result4"><p>&Oacute;f het kan je totaal niet schelen &oacute;f je ben niet op de hoogte. Ga maar lekker feestje vieren.</p></div>
+
+				<p>Goed zo.</p>
+
+				<p>Nou, deel dit op Facebook want dat is zo hip tegenwoordig en ga iets productievers doen.</p>
+
+				<p>FB knop</p>
+
+				<p><button type="button" class="btn btn-danger btn-lg reset">Reset</button>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="js/Pietwijzer.js"></script>
+	</body>
+</html>
