@@ -20,6 +20,15 @@ div.answers .list-group-item-heading {
 
 img {
 	max-width: 100%;
+	max-height: 380px;
+}
+
+img.piet {
+	-webkit-transition: background-color 400ms linear;
+    -moz-transition: background-color 400ms linear;
+    -o-transition: background-color 400ms linear;
+    -ms-transition: background-color 400ms linear;
+    transition: background-color 400ms linear;
 }
 
 .emoji {

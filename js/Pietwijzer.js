@@ -20,7 +20,7 @@
 			$el: $('#containerStart'),
 			init: function()
 			{
-				this.$el.find('button').on('click.pietwijzer', function()
+				this.$el.find('button').one('click.pietwijzer', function()
 				{
 					Pietwijzer.next();
 				});
@@ -71,7 +71,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -124,7 +124,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -177,7 +177,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -197,16 +197,56 @@
 			{
 				var _this = this;
 				var $next = this.$el.find('button.next');
+				var $img = this.$el.find('img.piet');
 
-				//colorpicker stuff
-
-				$next.on('click.pietwijzer', function(event)
+				this.$el.find('a.ans.ansA').on('click.pietwijzer', function(event)
+				{
+					_this.answer = 1;
+					$img.css({ backgroundColor: '#212121' });
+					_this.$el.find('a').removeClass('active');
+					$(this).addClass('active');
+					$next.fadeIn();
+					event.preventDefault();
+				});
+				this.$el.find('a.ans.ansB').on('click.pietwijzer', function(event)
+				{
+					_this.answer = 3;
+					$img.css({ backgroundColor: '#80634e' });
+					_this.$el.find('a').removeClass('active');
+					$(this).addClass('active');
+					$next.fadeIn();
+					event.preventDefault();
+				});
+				this.$el.find('a.ans.ansC').on('click.pietwijzer', function(event)
+				{
+					_this.answer = 2;
+					$img.css({ backgroundColor: '#e5c2a9' });
+					_this.$el.find('a').removeClass('active');
+					$(this).addClass('active');
+					$next.fadeIn();
+					event.preventDefault();
+				});
+				this.$el.find('a.ans.ansD').on('click.pietwijzer', function(event)
+				{
+					_this.answer = 4;
+					$img.css({ backgroundColor: '#f5f8d3' });
+					_this.$el.find('a').removeClass('active');
+					$(this).addClass('active');
+					$next.fadeIn();
+					event.preventDefault();
+				});
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
 			},
 			reset: function() {
+				var $next = this.$el.find('button.next');
+				var $img = this.$el.find('img.piet');
+
 				this.$el.find('a, button').off('click').removeClass('active');
+				$next.hide();
+				$img.css({ backgroundColor: '#212121' });
 			},
 			answer: false
 		},
@@ -250,7 +290,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -303,7 +343,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -356,7 +396,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -416,7 +456,7 @@
 					});
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -445,7 +485,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -498,7 +538,7 @@
 					$next.fadeIn();
 					event.preventDefault();
 				});
-				$next.on('click.pietwijzer', function(event)
+				$next.one('click.pietwijzer', function(event)
 				{
 					Pietwijzer.next();
 				});
@@ -549,19 +589,55 @@
 			init: function()
 			{
 				var results = getResults();
-				var resultN = 4;
+				var resultX = 0;
+				var resultN = false;
 
-				// var result1 = results[1];
-				// var result2 = results[2];
-				// var result3 = results[3];
-				// var result4 = results[4];
+				$.each(results, function(key, val)
+				// bepaal de index met de groostste value
+				{
+					if (val === resultX)
+					// het hudige resultaat heeft hetzelfde aantal punten als de vorige
+					// bijvoegen aan het eindresultaat
+					// als er later een resultaat met een hogere score
+					// komt, wordt dit toch weer overschreven
+					{
+						resultN += ',' + key;
+					}
+					if (val > resultX)
+					// het hudige resultaat heeft meer punten dan de vorige
+					// overschrijven dus
+					{
+						resultX = val;
+						resultN = key;
+					}
+				});
+
+				if ("string" === typeof resultN)
+				{
+					resultN = resultN.split(',');
+				}
+
+				if (!resultN || resultN.length > 1)
+				// kijken of er een gelijkstand is, zo ja
+				// simpel een twijfelgevalletje van maken
+				// kan wel heel moeilijk doen en alle
+				// combinaties van een gelijke stand
+				// in gaan tikken, maar 't is goed zo
+				{
+					resultN = 3;
+				}
 
 				this.$el.find('.result').hide();
 				this.$el.find('.result' + resultN).show();
 
-				this.$el.find('button').on('click.pietwijzer', function()
+				this.$el.find('button.reset').one('click.pietwijzer', function()
 				{
 					Pietwijzer.reset();
+				});
+
+				this.$el.find('button.fb').on('click.pietwijzer', function()
+				{
+					var sharer = window.open("https://www.facebook.com/sharer/sharer.php?p[url]=http://www.pietwijzer.nl/", "", "width=500, height=350");
 				});
 			},
 			reset: function() {
@@ -629,7 +705,6 @@
 
 	Pietwijzer.next = function()
 	{
-		console.log("Tussenstand:", getResults());
 		var prev = stepContainers[currentStep];
 		currentStep++;
 		executeStep(stepContainers[currentStep], prev);
