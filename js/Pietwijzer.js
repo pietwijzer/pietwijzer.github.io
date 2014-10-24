@@ -94,7 +94,7 @@
 
 				this.$el.find('a.ans.ansA').on('click.pietwijzer', function(event)
 				{
-					_this.answer = 3;
+					_this.answer = 2;
 					_this.$el.find('a').removeClass('active');
 					$(this).addClass('active');
 					$next.fadeIn();
@@ -118,7 +118,7 @@
 				});
 				this.$el.find('a.ans.ansD').on('click.pietwijzer', function(event)
 				{
-					_this.answer = 2;
+					_this.answer = 3;
 					_this.$el.find('a').removeClass('active');
 					$(this).addClass('active');
 					$next.fadeIn();
@@ -374,7 +374,7 @@
 				});
 				this.$el.find('a.ans.ansB').on('click.pietwijzer', function(event)
 				{
-					_this.answer = 3;
+					_this.answer = 2;
 					_this.$el.find('a').removeClass('active');
 					$(this).addClass('active');
 					$next.fadeIn();
@@ -382,7 +382,7 @@
 				});
 				this.$el.find('a.ans.ansC').on('click.pietwijzer', function(event)
 				{
-					_this.answer = 2;
+					_this.answer = 3;
 					_this.$el.find('a').removeClass('active');
 					$(this).addClass('active');
 					$next.fadeIn();
@@ -508,7 +508,7 @@
 
 				this.$el.find('a.ans.ansA').on('click.pietwijzer', function(event)
 				{
-					_this.answer = 1;
+					_this.answer = 3;
 					_this.$el.find('a').removeClass('active');
 					$(this).addClass('active');
 					$next.fadeIn();
@@ -524,7 +524,7 @@
 				});
 				this.$el.find('a.ans.ansC').on('click.pietwijzer', function(event)
 				{
-					_this.answer = 4;
+					_this.answer = 1;
 					_this.$el.find('a').removeClass('active');
 					$(this).addClass('active');
 					$next.fadeIn();
@@ -532,7 +532,7 @@
 				});
 				this.$el.find('a.ans.ansD').on('click.pietwijzer', function(event)
 				{
-					_this.answer = 3;
+					_this.answer = 4;
 					_this.$el.find('a').removeClass('active');
 					$(this).addClass('active');
 					$next.fadeIn();
