@@ -15,7 +15,6 @@ body {
 p.question {
 	font-size: 18.75px;
 	margin-bottom: 17px;
-	font-weight: 200;
 	line-height: 1.4;
 }
 
@@ -25,6 +24,7 @@ div.answers {
 
 div.answers .list-group-item-heading {
 	margin-bottom: 0;
+	font-weight: 400;
 }
 
 img {
@@ -70,6 +70,7 @@ img.piet {
     border-left-width: 5px;
     border-radius: 3px;
     background-color: white;
+    text-align: left;
 }
 .bs-callout h4 {
     margin-top: 0;
