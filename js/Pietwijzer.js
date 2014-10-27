@@ -723,4 +723,37 @@
 	}
 
 	Pietwijzer.init();
+
+	$(document).ready(function()
+	{
+		var $body = $('body');
+		var backgroundWidth = 569;
+		var backgroundHeight = 598;
+		var backgroundXpos = 0;
+		var backgroundYpos = 0;
+
+		var bodyBackgroundInterval = setInterval(function()
+		{
+			if (backgroundXpos > backgroundWidth)
+			{	
+				backgroundXpos = 2;
+			}
+			else 
+			{
+				backgroundXpos++;
+			}
+			if (backgroundYpos > backgroundHeight)
+			{
+				backgroundYpos = 2;
+			}
+			else 
+			{
+				backgroundYpos++;
+			}
+
+			$body.css({
+				backgroundPosition: backgroundXpos + 'px ' + backgroundYpos + 'px'
+			});
+		}, 60);
+	});
 })(jQuery, window, document);
