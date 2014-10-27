@@ -1,6 +1,5 @@
 body {
-	background: url(../images/bg.jpg) no-repeat #6b563a;
-	background-size: 100%;
+	background: url(../images/sniklaas.jpg) repeat #fbde8a;
 }
 
 .container {
@@ -9,7 +8,30 @@ body {
 }
 
 .well {
-	opacity: 0.95; /* luie zak-modus */
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: 1px solid #f4cb65;
+}
+
+.btn-warning {
+	background-color: #81642f;
+	border-color: #543b22;
+}
+
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open>.dropdown-toggle.btn-warning {
+	background-color: #a48449;
+	border-color: #543b22;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+	color: #ffffff;
+	background-color: #81642f;
+	border-color: #543b22;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+	background-color: #e1b64f;
+	border-color: #bf9341;
 }
 
 p.question {
