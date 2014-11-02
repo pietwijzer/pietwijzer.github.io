@@ -445,7 +445,7 @@
 				{
 					alert('Ik stel hier de vragen!');
 					var $this = $(this);
-					$this.find('.list-group-item-heading').text('D. Sorry...');
+					$this.find('.list-group-item-heading').text('Sorry...');
 					$this.on('click.pietwijzer', function(event)
 					{
 						_this.answer = 4;
@@ -464,7 +464,7 @@
 			reset: function() {
 				var $next = this.$el.find('button.next');
 
-				this.$el.find('a.ans.ansD .list-group-item-heading').text('D. Feminisme en racisme in één plaatje. Wat is er nou erger?');
+				this.$el.find('a.ans.ansD .list-group-item-heading').text('Feminisme en racisme in één plaatje. Wat is er nou erger?');
 				this.$el.find('a, button').off('click').removeClass('active');
 				$next.hide();
 			},
@@ -627,6 +627,8 @@
 					resultN = 3;
 				}
 
+				$.ajax('http://thomasdeurwater.nl/pietstatistiek/index.php?key=pietwijzerWatEenMeesterwerk&result='+ resultN);
+
 				this.$el.find('.result').hide();
 				this.$el.find('.result' + resultN).show();
 
@@ -727,8 +729,8 @@
 	$(document).ready(function()
 	{
 		var $body = $('body');
-		var backgroundWidth = 569;
-		var backgroundHeight = 598;
+		var backgroundWidth = 341;
+		var backgroundHeight = 359;
 		var backgroundXpos = 0;
 		var backgroundYpos = 0;
 
@@ -755,5 +757,16 @@
 				backgroundPosition: backgroundXpos + 'px ' + backgroundYpos + 'px'
 			});
 		}, 60);
+
+		window.stopDieVerdomdeAchtergrondZodatIkInChromeInspectorKanWerken = function()
+		{
+			clearInterval(bodyBackgroundInterval);
+			return 'Ok sorry... =(';
+		}
+	}).keypress(function(e)
+	{
+		if(e.charCode == 96){
+			window.stopDieVerdomdeAchtergrondZodatIkInChromeInspectorKanWerken()
+		}
 	});
 })(jQuery, window, document);

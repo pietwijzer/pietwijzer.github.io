@@ -1,5 +1,7 @@
 body {
 	background: url(../images/sniklaas.jpg) repeat #fbde8a;
+	font-family: 'Bitter', serif;
+	font-size: 16px;
 }
 
 .container {
@@ -10,6 +12,7 @@ body {
 .well {
 	box-shadow: none;
 	-webkit-box-shadow: none;
+	background: url(../images/well_bg.png);
 	border: 1px solid #f4cb65;
 }
 
@@ -41,7 +44,7 @@ p.question {
 }
 
 div.answers {
-	text-align: left;
+	/*text-align: left;*/
 }
 
 div.answers .list-group-item-heading {
@@ -60,6 +63,10 @@ img.piet {
     -o-transition: background-color 400ms linear;
     -ms-transition: background-color 400ms linear;
     transition: background-color 400ms linear;
+}
+
+img.meter {
+	max-width: 60%;
 }
 
 .emoji {
