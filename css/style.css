@@ -7,6 +7,7 @@ body {
 .container {
 	text-align: center;
 	max-width: 640px;
+	min-width: 320px;
 }
 
 .well {
@@ -66,7 +67,68 @@ img.piet {
 }
 
 img.meter {
-	max-width: 60%;
+	max-width: 45.3%; /* Alsjeblieft Wouter */
+}
+
+.voortgang {
+	width: 514px;
+	margin: 14px auto 0;
+}
+
+.voortgang-links {
+	float: left;
+	margin-right: 14px;
+}
+
+.voortgang-rechts {
+	float: left;
+}
+
+.pakje {
+	height: 53px;
+	float: left;
+	background-image: url(../images/kado-leeg.gif);
+	background-repeat: no-repeat;
+}
+
+.pakje-1 {
+	width: 48px;
+}
+
+.pakje-2 {
+	width: 54px;
+	background-position: -48px 0;
+}
+
+.pakje-3 {
+	width: 50px;
+	background-position: -102px 0px;
+}
+
+.pakje-4 {
+	width: 55px;
+	background-position: -152px 0px;
+}
+
+.pakje-5 {
+	width: 43px;
+	background-position: -207px 0px;
+}
+
+.pakje-vol {
+	background-image: url(../images/kado-vol.gif);
+}
+
+@media only screen and (max-width : 587px) {
+	.voortgang {
+		width: 264px;
+	}
+	.pakje {
+		height: 75px;
+	}
+	.voortgang-rechts .pakje {
+		height: 53px;
+	}
 }
 
 .emoji {
@@ -80,15 +142,19 @@ img.meter {
 	padding: 25px 0;
 }
 
+.voortgang-rechts .pakje {
+	height: 53px;
+}
+
 #containerLogo img {
 	max-width: 90%;
 }
 
-.well > h1:first-child, .well > p:first-child {
+.well > h1:first-child, .well > p:first-child, .result > h1:first-child {
 	margin-top: 0;
 }
 
-.well > p:last-child, .well > div:last-child {
+.well > p:last-child, .well > div:last-child, .result > p:last-child {
 	margin-bottom: 0;
 }
 
